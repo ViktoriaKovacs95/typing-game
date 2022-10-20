@@ -1,3 +1,53 @@
+main{
+    display: grid;
+    place-items: center;
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 2rem;
+}
+h1{
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4em;
+    line-height: 105%;
+    color: white;
+}
+p{
+    text-align: center;
+    font-size: 1.6em;
+}
+body{
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background-color: #0652dd;
+    color: white;
+}
+button{
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+    border: 0;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+input {
+    width: 300px;
+    padding: 20px;
+    font-size: 2em;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: inset 1px 0px 5px 4px rgba(0,0,0,0.2);
+}
+
+.congrats {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
+    color: #FFC312
+}
 .error{
     background-color: #EA2027;
 }
@@ -7,6 +57,20 @@
 }
 .winner {
     background-image: url(https://cdn.glitch.me/fe55c52b-f859-4f17-a4c6-1af45426e959%2F6ob.gif);
+}
+.button:hover .rocket {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.started button:before {
+    content: "re";
+}
+
+.started .rocket {
+    animation: zoomOutRight 1s;
+    animation-iteration-count: 1;
+    transform-origin: right center;
 }
 .rocket {
     display:block;
@@ -41,3 +105,16 @@ span:after {
      transform: scale(0.1) translate(500px, 0);
    }
  }
+ .sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
